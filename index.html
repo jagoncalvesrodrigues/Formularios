@@ -2,11 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body class="body"> 
+    <section class="info-cards">
+        <div class="card-back">
+            <span id="card-cvv">000</span>
+        </div>
+        <div class="card-front">
+            <span id="card-front-number">0000 0000 0000 0000</span>
+            <div class="card-name-date">
+                <span id="card-name">JANE APPLESEED</span>
+                <span id="card-date">00/00</span>
+            </div>
+        </div>
+    </section>
+    <main class="main">
+        <label for="" class="text-holder">CARDHOLDER NAME</label>
+        <input type="text" placeholder="e.g. Jane Appleseed" id="name" class="text-input" maxlength="16">
+        <span id="error" class="shown-error error">Can't be blank</span>
+        <label for="" class="text-holder">CARD NUMBER</label>
+        <input type="number" placeholder="e.g. 1234 5678 9123 0000" id="card-number" class="text-input " minlength="19">
+        <span id="error" class="shown-error error">Can't be blank</span>
+        <div class="date-cvc">
+            <label for="" class="text-holder text-holder-date">EXP.DATE (MM/YY)
+                <div class="dates">
+                    <input type="number" placeholder="MM" id="month" class="text-input ">
+                    <input type="number" placeholder="YY" id="year" class="text-input ">
+                </div>
+                <span id="shown-error error" class="error">Can't be blank</span>
+            </label>
+            <label for="" class="text-holder text-holder-cvc">CVC
+                <input type="number" placeholder="e.g. 123" id="cvc-number" class="text-input cvc-number">
+                <span id="shown-error error" class="error">Can't be blank</span>
+            </label>
+        </div>
+        <button id="main-button" class="confirm-button">Confirm</button>
+    </main>
+    <script src="./src/script.js"></script>
 </body>
 </html>
