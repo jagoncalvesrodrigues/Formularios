@@ -16,13 +16,12 @@ const error = document.getElementById('error')
 const textInputElements = document.querySelectorAll('.text-input');
 
 const emptyInput = event =>{
-    const input = event.target; //se selecciona el input
-
-    if(input.value === ""){
-        error.classList.remove("error");
-    }else{
-        error.classList.add("error");
+    event.preventDefault();
+    
+    if(event.target.name.value === ''){
+        
     }
+    console.log()
 }
 nameElement.addEventListener('input',emptyInput);
 cardNumberElement.addEventListener('input',emptyInput);
